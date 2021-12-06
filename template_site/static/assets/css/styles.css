@@ -565,6 +565,10 @@ a.current-page {
   line-height: 1.4em;
 }
 
+#fgas-compliance {
+  scroll-margin-top: 96px !important;
+}
+
 #fgas-compliance img {
   max-width: 100px;
   align-self: flex-start;
