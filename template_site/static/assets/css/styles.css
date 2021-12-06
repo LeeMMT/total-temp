@@ -565,6 +565,11 @@ a.current-page {
   line-height: 1.4em;
 }
 
+#fgas-compliance img {
+  max-width: 100px;
+  align-self: flex-start;
+}
+
 .service-card ul,
 .two-col-flex ul {
   display: flex;
@@ -576,8 +581,8 @@ a.current-page {
   display: list-item;
   list-style: disc;
   list-style-position: inside;
-  text-indent: -20px;
-  margin-left: 20px;
+  text-indent: -16px;
+  margin-left: 16px;
 }
 
 .two-col-flex {
@@ -590,32 +595,9 @@ a.current-page {
   max-width: 45%;
 }
 
-.service-col:first-of-type {
-}
-
 .service-col .heading {
   font-family: "Ubuntu Med";
   margin-bottom: 8px;
-}
-
-.other-services {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  padding: 0 16px;
-}
-
-.other-service-card {
-  padding: 8px;
-  background-color: #c1c1c3;
-  border-radius: 3px;
-  margin-right: 16px;
-  margin-bottom: 16px;
-}
-
-.other-service-card:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
 }
 
 .service-card img {
@@ -774,6 +756,9 @@ footer {
 }
 
 footer .logo-wrapper {
+  width: max-content;
+  height: max-content;
+  align-self: center;
   margin-bottom: 16px;
 }
 
@@ -786,6 +771,7 @@ footer .logo-wrapper {
 }
 
 .footer-grid section {
+  position: relative;
   padding: 16px 0;
 }
 
@@ -890,6 +876,16 @@ footer .logo-wrapper {
 .footer-seperator.first {
   width: calc(100% - 32px);
   margin: 16px auto;
+}
+
+.footer-seperator-horizontal {
+  display: none;
+  width: 1px;
+  height: calc(100% - 32px);
+  background-color: #505053;
+  position: absolute;
+  right: 0;
+  top: 16px;
 }
 
 /*Misc End*/
@@ -1009,6 +1005,9 @@ footer .logo-wrapper {
   .footer-seperator.first-shown {
     display: block;
   }
+  .footer-seperator-horizontal {
+    display: initial;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1018,6 +1017,9 @@ footer .logo-wrapper {
   }
   .footer-seperator {
     display: block;
+  }
+  .footer-seperator-horizontal {
+    display: none;
   }
 }
 
