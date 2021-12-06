@@ -13,8 +13,9 @@
   --header-color: #3c3c3e;
   --primary-color: #3ab5f8;
   --secondary-color: #3ab5f8;
-  --white: #fff;
-  --text-color: #040604;
+  --white: #f5f5f5;
+  --text-color: #040506;
+  --secondary-text-color: #434c56;
 
   touch-action: pan-x pan-y;
   height: 100%;
@@ -106,6 +107,10 @@ button:hover {
   color: #c1c1c3;
 }
 
+.text-secondary {
+  color: var(--secondary-text-color);
+}
+
 /*Animated Button start*/
 
 button.animated {
@@ -171,6 +176,10 @@ button.animated.dark:hover {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.container.padded {
+  padding: 0 16px;
 }
 
 html {
@@ -427,11 +436,12 @@ a.current-page {
   width: 100%;
   height: calc(100vh + 32px);
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.3;
   z-index: 1;
 }
 
 .hero-inner {
+  width: 100%;
   color: var(--white);
   font-size: 32px;
   line-height: 1.3em;
@@ -499,7 +509,6 @@ a.current-page {
 }
 
 .vertical-overlap p {
-  font-size: 18px;
   line-height: 1.3em;
 }
 
@@ -523,23 +532,70 @@ a.current-page {
 
 /*Service Cards Start*/
 
+.splash-back {
+  width: 100%;
+  height: max-content;
+  padding: 64px 0;
+  background-color: var(--white);
+}
+
+.splash-back:nth-of-type(even) {
+  background-color: #ebebeb;
+}
+
+.splash-back:first-of-type {
+  margin-top: 64px;
+}
+
 #service-section {
   scroll-margin-top: 96px !important;
+  margin-top: 64px;
 }
 
 .service-card-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .service-card {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 650px;
   line-height: 1.4em;
-  margin-right: 32px;
-  margin-bottom: 32px;
+}
+
+.service-card ul,
+.two-col-flex ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card li,
+.two-col-flex li {
+  display: list-item;
+  list-style: disc;
+  list-style-position: inside;
+  text-indent: -20px;
+  margin-left: 20px;
+}
+
+.two-col-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-col {
+  max-width: 45%;
+}
+
+.service-col:first-of-type {
+}
+
+.service-col .heading {
+  font-family: "Ubuntu Med";
+  margin-bottom: 8px;
 }
 
 .other-services {
@@ -912,6 +968,22 @@ footer .logo-wrapper {
   .service-card-container {
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+  .container.padded {
+    padding: 0;
+  }
+  .two-col-flex {
+    padding: 0 16px;
+  }
+  .service-col {
+    max-width: unset;
+    width: 100%;
+  }
+  .service-col:last-of-type {
+    margin-top: 32px;
+  }
+  #fgas-compliance .service-col:last-of-type {
+    margin-top: 0;
   }
   h2#service-section {
     text-align: left;
