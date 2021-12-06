@@ -11,8 +11,8 @@
   --footer-height: 300px;
 
   --header-color: #3c3c3e;
-  --primary-color: #6bc77f;
-  --secondary-color: #3f68ba;
+  --primary-color: #3ab5f8;
+  --secondary-color: #3ab5f8;
   --white: #fff;
   --text-color: #040604;
 
@@ -55,6 +55,10 @@
 
 .size18 {
   font-size: 18px;
+}
+
+.size14 {
+  font-size: 14px;
 }
 
 .med-size-font {
