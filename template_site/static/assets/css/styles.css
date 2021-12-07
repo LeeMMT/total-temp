@@ -850,6 +850,10 @@ footer .logo {
   display: none;
 }
 
+.mobile-bottom-section {
+  display: none;
+}
+
 /*Footer End*/
 
 /*Icons Start*/
@@ -944,7 +948,7 @@ footer .logo {
   display: none;
 }
 
-.footer-seperator.first {
+.footer-seperator.first, .footer-seperator.second {
   width: calc(100% - 32px);
   margin: 16px auto;
 }
@@ -1103,9 +1107,7 @@ footer .logo {
     column-gap: 0;
   }
   .footer-grid section:first-of-type {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-bottom: 0;
+    display: none;
   }
   .refcom-logo {
     margin-top: 0;
@@ -1117,6 +1119,17 @@ footer .logo {
   .footer-seperator-horizontal {
     display: none;
   }
+  .footer-seperator.first {
+    display: none;
+  }
+  .mobile-bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+  .footer-seperator.second {
+    display: block;
 }
 
 @media screen and (max-width: 370px) {
