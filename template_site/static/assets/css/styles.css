@@ -948,7 +948,8 @@ footer .logo {
   display: none;
 }
 
-.footer-seperator.first, .footer-seperator.second {
+.footer-seperator.first,
+.footer-seperator.second {
   width: calc(100% - 32px);
   margin: 16px auto;
 }
@@ -1130,6 +1131,7 @@ footer .logo {
   }
   .footer-seperator.second {
     display: block;
+  }
 }
 
 @media screen and (max-width: 370px) {
