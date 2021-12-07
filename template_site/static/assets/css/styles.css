@@ -14,6 +14,7 @@
   --primary-color: #3ab5f8;
   --secondary-color: #3ab5f8;
   --white: #f5f5f5;
+  --secondary-white: #dde1e4;
   --text-color: #040506;
   --secondary-text-color: #434c56;
 
@@ -113,6 +114,10 @@ button:hover {
 
 .text-secondary {
   color: var(--secondary-text-color);
+}
+
+.secondary-white {
+  color: var(--secondary-white);
 }
 
 /*Animated Button start*/
@@ -556,12 +561,26 @@ a.current-page {
   background-color: var(--white);
 }
 
-.splash-back:nth-of-type(even) {
-  background-color: #ebebeb;
+.splash-back:nth-of-type(odd) {
+  background-color: #e0e0e0;
 }
 
 .splash-back:first-of-type {
   margin-top: 64px;
+}
+
+.blueprint1 {
+  background-image: url("../images/blueprint1.jpeg");
+  background-position: center center;
+  background-size: cover;
+  color: var(--white);
+}
+
+.blueprint2 {
+  background-image: url("../images/blueprint-second.jpeg");
+  background-position: center center;
+  background-size: cover;
+  color: var(--white);
 }
 
 #service-section {
@@ -578,7 +597,7 @@ a.current-page {
 .service-card {
   display: flex;
   flex-direction: column;
-  max-width: 650px;
+  max-width: 50%;
   line-height: 1.4em;
 }
 
@@ -785,6 +804,11 @@ footer .logo {
   height: 60px;
 }
 
+.refcom-logo {
+  height: 50px;
+  margin-left: 16px;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -965,14 +989,17 @@ footer .logo {
   .hero {
     background-attachment: unset;
   }
-}
-
-@media screen and (max-width: 850px) {
   .hero-inner .text-wrapper {
     max-width: 100%;
   }
+  .footer-grid section:first-of-type {
+    flex-direction: column;
+  }
+  .refcom-logo {
+    margin-left: 0;
+    margin-top: 16px;
+  }
 }
-
 @media screen and (max-width: 682px) {
   .nav-container .logo {
     height: 30px;
@@ -1019,6 +1046,10 @@ footer .logo {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
+  .service-card {
+    max-width: 100%;
+    padding: 0 16px;
+  }
   .container.padded {
     padding: 0;
   }
@@ -1041,7 +1072,6 @@ footer .logo {
     margin-bottom: 32px !important;
   }
   .service-card {
-    margin-left: 16px;
     margin-right: 0;
   }
   .footer-grid {
@@ -1073,8 +1103,13 @@ footer .logo {
     column-gap: 0;
   }
   .footer-grid section:first-of-type {
+    flex-direction: row;
     justify-content: flex-start;
     padding-bottom: 0;
+  }
+  .refcom-logo {
+    margin-top: 0;
+    margin-left: 16px;
   }
   .footer-seperator {
     display: block;
